@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Declare the bundled font as its own 900-weight family.  This prevents the
+  widget host from asking Android to substitute a "bold" variant that does not
+  exist on the device.
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:font="@font/arial_black"
+        android:fontStyle="normal"
+        android:fontWeight="900" />
+</font-family>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Flip Clock</string>
+    <string name="widget_description">A split-flap clock for your home screen</string>
+    <string name="settings_title">Clock settings</string>
+    <string name="settings_subtitle">Make the clock yours. Changes apply instantly.</string>
+    <string name="time_format_title">24-hour time</string>
+    <string name="time_format_summary">Use 13:00 instead of 1:00 PM</string>
+    <string name="format_12">12-hour</string>
+    <string name="format_24">24-hour</string>
+    <string name="show_seconds_summary">Display seconds on the clock</string>
+    <string name="design_title">Widget design</string>
+    <string name="design_summary">Choose a look. Changes apply instantly.</string>
+    <string name="design_1">Design 1 · Classic graphite</string>
+    <string name="design_2">Design 2 · Classic graphite, centered labels</string>
+    <string name="design_3">Design 3 · Blue glass</string>
+    <string name="update_settings_title">Update timing</string>
+    <string name="precise_updates">Enable precise minute updates</string>
+    <string name="precise_updates_explanation">Allow Flip Clock under Alarms &amp; reminders. Without this access, Android may delay minute changes to save battery.</string>
+    <string name="show_seconds">Show seconds</string>
+</resources>

@@ -1,0 +1,19 @@
+# Android/Gradle build output
+.gradle/
+**/build/
+.kotlin/
+
+# Local machine configuration
+local.properties
+
+# Android Studio / IntelliJ metadata
+.idea/
+*.iml
+
+# Native build output
+.externalNativeBuild/
+.cxx/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,162 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp">
+
+    <LinearLayout
+        android:id="@+id/design3_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/design3_glass_panel"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <LinearLayout
+            android:id="@+id/time_box"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ViewFlipper
+                android:id="@+id/digit_flipper_0"
+                style="@style/ClockDigit"
+                android:layout_marginEnd="0dp"
+                android:animateFirstView="true"
+                android:inAnimation="@anim/drop_in"
+                android:outAnimation="@anim/drop_out">
+                <ImageView
+                    android:id="@+id/digit_0_a"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_first_0" />
+                <ImageView
+                    android:id="@+id/digit_0_b"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_first_0" />
+            </ViewFlipper>
+            <ViewFlipper
+                android:id="@+id/digit_flipper_1"
+                style="@style/ClockDigit"
+                android:layout_marginEnd="0dp"
+                android:animateFirstView="true"
+                android:inAnimation="@anim/drop_in"
+                android:outAnimation="@anim/drop_out">
+                <ImageView
+                    android:id="@+id/digit_1_a"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_second_0" />
+                <ImageView
+                    android:id="@+id/digit_1_b"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_second_0" />
+            </ViewFlipper>
+
+            <FrameLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/time_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/design3_colon_dots"
+                    android:tint="#709EEA" />
+                <FrameLayout
+                    android:id="@+id/seconds_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <ViewFlipper
+                        android:id="@+id/seconds_flipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateFirstView="false"
+                        android:autoStart="true"
+                        android:flipInterval="1000"
+                        android:inAnimation="@anim/blink_in"
+                        android:outAnimation="@anim/blink_out">
+                        <ImageView
+                            android:id="@+id/blink_colon_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:src="@drawable/design3_colon_dots"
+                            android:tint="#709EEA" />
+                        <ImageView
+                            android:id="@+id/blink_colon_off"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:src="@drawable/design3_colon_dots"
+                            android:tint="#3A5278" />
+                    </ViewFlipper>
+                </FrameLayout>
+            </FrameLayout>
+
+            <ViewFlipper
+                android:id="@+id/digit_flipper_2"
+                style="@style/ClockDigit"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:animateFirstView="true"
+                android:inAnimation="@anim/drop_in"
+                android:outAnimation="@anim/drop_out">
+                <ImageView
+                    android:id="@+id/digit_2_a"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_first_0" />
+                <ImageView
+                    android:id="@+id/digit_2_b"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_first_0" />
+            </ViewFlipper>
+            <ViewFlipper
+                android:id="@+id/digit_flipper_3"
+                style="@style/ClockDigit"
+                android:layout_marginStart="0dp"
+                android:animateFirstView="true"
+                android:inAnimation="@anim/drop_in"
+                android:outAnimation="@anim/drop_out">
+                <ImageView
+                    android:id="@+id/digit_3_a"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_second_0" />
+                <ImageView
+                    android:id="@+id/digit_3_b"
+                    style="@style/ClockDigitImageDesign3"
+                    android:src="@drawable/design3_arial_pair_second_0" />
+            </ViewFlipper>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/metadata_box"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
+            android:paddingEnd="10dp">
+            <ImageView
+                android:id="@+id/date_header"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_gravity="top|end"
+                android:contentDescription="@null"
+                android:scaleType="fitEnd" />
+            <ImageView
+                android:id="@+id/weekday_header"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|end"
+                android:contentDescription="@null"
+                android:scaleType="fitEnd" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
